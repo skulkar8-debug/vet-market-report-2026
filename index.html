@@ -362,143 +362,257 @@ body {
 <!-- PAGE 7 REGIONAL CBSA STARTING POINTS -->
 <div class="page" style="display:flex;flex-direction:column;">
   <div class="pg-hdr"><div class="pgh-brand-row"><img src="stoc-logo.png" style="height:42px;width:auto;"></div></div>
-  <div style="flex:1;padding:18px 44px 0;display:flex;flex-direction:column;gap:10px;overflow:hidden;">
+  <div style="flex:1;padding:18px 44px 0;display:flex;flex-direction:column;gap:8px;overflow:hidden;">
 
     <div>
       <div class="sec-label">CBSA Intelligence</div>
-      <div class="pg-headline" style="margin-bottom:4px;">Top CBSAs by Region. Blue Dots Are Acquisition Priority. Orange Dots Are Diligence-Heavy. Not All Are the Same.</div>
-      <div class="body-txt">These tables show the highest-priority CBSAs by region using valid CBSA labels only. The point is not to declare every market a winner; it is to identify where sourcing depth is large enough to justify structured outreach. Many of these markets also appear in the diligence-heavy section; high depth and high pressure can coexist.</div>
+      <div class="pg-headline" style="margin-bottom:4px;">Pittsburgh and Lansing Are the Only Acquisition-Priority CBSAs in the Northeast and Midwest. Most Regional Depth Sits in High-Pressure Markets.</div>
+      <div class="body-txt">Top five CBSAs per region by 65+ target depth. Within each region, acquisition-priority markets appear first (navy row). Diligence-heavy markets follow (rust row). Regional-reference CBSAs have no colored background. High-pressure % in red means over 75% of targets face elevated competitive conditions.</div>
     </div>
 
-    
-    <!-- Type legend -->
-    <div style="display:flex;gap:16px;align-items:center;padding:6px 0;flex-shrink:0;">
-      <div style="font-size:8px;font-weight:700;color:#888;text-transform:uppercase;letter-spacing:1px;">Market type:</div>
-      <div style="display:flex;align-items:center;gap:5px;"><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#0D1B2F;margin-right:5px;vertical-align:middle;flex-shrink:0;" title="Acquisition Priority"></span><span style="font-size:8px;color:#333;font-weight:600;">Acquisition Priority</span><span style="font-size:8px;color:#888;margin-left:2px;">(P8)</span></div>
-      <div style="display:flex;align-items:center;gap:5px;"><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#C04A2A;margin-right:5px;vertical-align:middle;flex-shrink:0;" title="Diligence-Heavy"></span><span style="font-size:8px;color:#333;font-weight:600;">Diligence-Heavy</span><span style="font-size:8px;color:#888;margin-left:2px;">(P10)</span></div>
-      <div style="font-size:8px;color:#888;">No dot = regional reference only</div>
+    <!-- Legend -->
+    <div style="display:flex;gap:14px;align-items:center;flex-shrink:0;padding:5px 10px;background:#F4F2EE;border-left:3px solid #ddd;">
+      <div style="display:flex;align-items:center;gap:6px;"><div style="width:14px;height:12px;background:#EEF3FA;border:1px solid #0D1B2F;border-radius:1px;flex-shrink:0;"></div><span style="font-size:8px;font-weight:700;color:#333;">Acquisition Priority</span><span style="font-size:7.5px;color:#888;">manageable competitive conditions</span></div>
+      <div style="width:1px;height:14px;background:#ddd;"></div>
+      <div style="display:flex;align-items:center;gap:6px;"><div style="width:14px;height:12px;background:#FDF5F3;border:1px solid #C04A2A;border-radius:1px;flex-shrink:0;"></div><span style="font-size:8px;font-weight:700;color:#333;">Diligence-Heavy</span><span style="font-size:7.5px;color:#888;">strong depth, elevated pressure</span></div>
+      <div style="width:1px;height:14px;background:#ddd;"></div>
+      <div style="display:flex;align-items:center;gap:6px;"><div style="width:14px;height:12px;background:#fff;border:1px solid #ddd;border-radius:1px;flex-shrink:0;"></div><span style="font-size:8px;font-weight:700;color:#333;">Regional reference</span><span style="font-size:7.5px;color:#888;">not in either priority table</span></div>
+      <div style="margin-left:auto;font-size:7.5px;color:#aaa;">Hi-P% in red = above 75%</div>
     </div>
+
+    <!-- 2-column layout: NE+South left, Midwest+West right -->
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;flex:1;min-height:0;">
 
-      <!-- Northeast -->
-      <div style="display:flex;flex-direction:column;">
-        <div style="font-size:9px;font-weight:800;letter-spacing:1px;text-transform:uppercase;padding:7px 10px;background:var(--navy);color:#fff;margin-bottom:0;">Northeast</div>
-        <table style="width:100%;border-collapse:collapse;font-size:8px;">
-          <thead><tr style="background:#F4F2EE;border-bottom:1px solid #ddd;">
-            <th style="text-align:left;padding:4px 6px 4px 8px;font-size:7.5px;font-weight:700;color:#555;text-transform:uppercase;letter-spacing:1px;">CBSA</th>
-            <th style="text-align:right;padding:4px 5px;font-size:7.5px;font-weight:700;color:#555;text-transform:uppercase;letter-spacing:1px;">Tgts</th>
-            <th style="text-align:right;padding:4px 5px;font-size:7.5px;font-weight:700;color:var(--navy);text-transform:uppercase;letter-spacing:1px;">65+</th>
-            <th style="text-align:right;padding:4px 5px;font-size:7.5px;font-weight:700;color:#1275B0;text-transform:uppercase;letter-spacing:1px;">59+</th>
-            <th style="text-align:right;padding:4px 5px;font-size:7.5px;font-weight:700;color:#555;text-transform:uppercase;letter-spacing:1px;">Avg</th>
-            <th style="text-align:right;padding:4px 8px 4px 5px;font-size:7.5px;font-weight:700;color:#C04A2A;text-transform:uppercase;letter-spacing:1px;">Hi-P%</th>
+      <!-- LEFT: Northeast + South -->
+      <div style="display:flex;flex-direction:column;gap:0;overflow:hidden;">
+        <table style="width:100%;border-collapse:collapse;font-size:8.5px;">
+          <thead><tr style="border-bottom:2px solid var(--navy);background:#F4F2EE;">
+            <th style="text-align:left;padding:5px 6px 5px 8px;font-size:8px;font-weight:700;color:var(--navy);text-transform:uppercase;letter-spacing:1px;width:36%;">CBSA</th>
+            <th style="text-align:right;padding:5px 6px;font-size:8px;font-weight:700;color:#888;text-transform:uppercase;letter-spacing:1px;width:8%;">St.</th>
+            <th style="text-align:right;padding:5px 6px;font-size:8px;font-weight:700;color:var(--navy);text-transform:uppercase;letter-spacing:1px;">Tgts</th>
+            <th style="text-align:right;padding:5px 6px;font-size:8px;font-weight:700;color:var(--navy);text-transform:uppercase;letter-spacing:1px;">65+</th>
+            <th style="text-align:right;padding:5px 6px;font-size:8px;font-weight:700;color:var(--navy);text-transform:uppercase;letter-spacing:1px;">59+</th>
+            <th style="text-align:right;padding:5px 6px;font-size:8px;font-weight:700;color:var(--navy);text-transform:uppercase;letter-spacing:1px;">STOC</th>
+            <th style="text-align:right;padding:5px 8px 5px 6px;font-size:8px;font-weight:700;color:#C04A2A;text-transform:uppercase;letter-spacing:1px;">Hi-P%</th>
           </tr></thead>
           <tbody>
-            <tr style="border-bottom:1px solid #eee;"><td style="padding:5px 6px 5px 8px;font-weight:600;color:var(--navy);"><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#C04A2A;margin-right:5px;vertical-align:middle;flex-shrink:0;" title="Diligence-Heavy"></span>New York-Newark-Jersey City, NY-NJ-PA</td><td style="padding:5px;text-align:right;color:#333;">1,278</td><td style="padding:5px;text-align:right;font-weight:700;color:var(--navy);">51</td><td style="padding:5px;text-align:right;color:#333;">130</td><td style="padding:5px;text-align:right;color:#555;">48.2</td><td style="padding:5px 8px 5px 5px;text-align:right;font-weight:800;color:#C04A2A;">91.6%</td></tr>
-            <tr style="border-bottom:1px solid #eee;background:#F9F8F6;"><td style="padding:5px 6px 5px 8px;font-weight:600;color:var(--navy);"><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#0D1B2F;margin-right:5px;vertical-align:middle;flex-shrink:0;" title="Acquisition Priority"></span>Pittsburgh, PA</td><td style="padding:5px;text-align:right;color:#333;">219</td><td style="padding:5px;text-align:right;font-weight:700;color:var(--navy);">46</td><td style="padding:5px;text-align:right;color:#333;">73</td><td style="padding:5px;text-align:right;color:#333;">52.8</td><td style="padding:5px 8px 5px 5px;text-align:right;color:#555;">59.8%</td></tr>
-            <tr style="border-bottom:1px solid #eee;"><td style="padding:5px 6px 5px 8px;font-weight:600;color:var(--navy);"><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#C04A2A;margin-right:5px;vertical-align:middle;flex-shrink:0;" title="Diligence-Heavy"></span>Boston-Cambridge-Newton, MA-NH</td><td style="padding:5px;text-align:right;color:#333;">486</td><td style="padding:5px;text-align:right;font-weight:700;color:var(--navy);">39</td><td style="padding:5px;text-align:right;color:#333;">118</td><td style="padding:5px;text-align:right;color:#555;">51.1</td><td style="padding:5px 8px 5px 5px;text-align:right;font-weight:700;color:#C04A2A;">78.4%</td></tr>
-            <tr style="border-bottom:1px solid #eee;background:#F9F8F6;"><td style="padding:5px 6px 5px 8px;font-weight:600;color:var(--navy);"><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#C04A2A;margin-right:5px;vertical-align:middle;flex-shrink:0;" title="Diligence-Heavy"></span>Philadelphia-Camden-Wilmington, PA-NJ-DE-MD</td><td style="padding:5px;text-align:right;color:#333;">461</td><td style="padding:5px;text-align:right;font-weight:700;color:var(--navy);">37</td><td style="padding:5px;text-align:right;color:#333;">73</td><td style="padding:5px;text-align:right;color:#555;">49.8</td><td style="padding:5px 8px 5px 5px;text-align:right;font-weight:700;color:#C04A2A;">83.1%</td></tr>
-            <tr><td style="padding:5px 6px 5px 8px;font-weight:600;color:var(--navy);"><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#C04A2A;margin-right:5px;vertical-align:middle;flex-shrink:0;" title="Diligence-Heavy"></span>Washington-Arlington-Alexandria, DC-VA-MD-WV</td><td style="padding:5px;text-align:right;color:#333;">467</td><td style="padding:5px;text-align:right;font-weight:700;color:var(--navy);">36</td><td style="padding:5px;text-align:right;color:#333;">91</td><td style="padding:5px;text-align:right;color:#555;">50.5</td><td style="padding:5px 8px 5px 5px;text-align:right;font-weight:700;color:#C04A2A;">77.9%</td></tr>
-          </tbody>
-        </table>
-
-        <!-- South -->
-        <div style="font-size:9px;font-weight:800;letter-spacing:1px;text-transform:uppercase;padding:7px 10px;background:#1A3A5C;color:#fff;margin-top:10px;">South</div>
-        <table style="width:100%;border-collapse:collapse;font-size:8px;">
-          <thead><tr style="background:#F4F2EE;border-bottom:1px solid #ddd;">
-            <th style="text-align:left;padding:4px 6px 4px 8px;font-size:7.5px;font-weight:700;color:#555;text-transform:uppercase;letter-spacing:1px;">CBSA</th>
-            <th style="text-align:right;padding:4px 5px;font-size:7.5px;font-weight:700;color:#555;text-transform:uppercase;letter-spacing:1px;">Tgts</th>
-            <th style="text-align:right;padding:4px 5px;font-size:7.5px;font-weight:700;color:var(--navy);text-transform:uppercase;letter-spacing:1px;">65+</th>
-            <th style="text-align:right;padding:4px 5px;font-size:7.5px;font-weight:700;color:#1275B0;text-transform:uppercase;letter-spacing:1px;">59+</th>
-            <th style="text-align:right;padding:4px 5px;font-size:7.5px;font-weight:700;color:#555;text-transform:uppercase;letter-spacing:1px;">Avg</th>
-            <th style="text-align:right;padding:4px 8px 4px 5px;font-size:7.5px;font-weight:700;color:#C04A2A;text-transform:uppercase;letter-spacing:1px;">Hi-P%</th>
-          </tr></thead>
-          <tbody>
-            <tr style="border-bottom:1px solid #eee;"><td style="padding:5px 6px 5px 8px;font-weight:600;color:var(--navy);"><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#C04A2A;margin-right:5px;vertical-align:middle;flex-shrink:0;" title="Diligence-Heavy"></span>Nashville-Davidson-Murfreesboro-Franklin, TN</td><td style="padding:5px;text-align:right;color:#333;">256</td><td style="padding:5px;text-align:right;font-weight:700;color:var(--navy);">23</td><td style="padding:5px;text-align:right;color:#333;">54</td><td style="padding:5px;text-align:right;color:#555;">50.8</td><td style="padding:5px 8px 5px 5px;text-align:right;font-weight:700;color:#C04A2A;">75.8%</td></tr>
-            <tr style="border-bottom:1px solid #eee;background:#F9F8F6;"><td style="padding:5px 6px 5px 8px;font-weight:600;color:var(--navy);"><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#C04A2A;margin-right:5px;vertical-align:middle;flex-shrink:0;" title="Diligence-Heavy"></span>Atlanta-Sandy Springs-Alpharetta, GA</td><td style="padding:5px;text-align:right;color:#333;">589</td><td style="padding:5px;text-align:right;font-weight:700;color:var(--navy);">20</td><td style="padding:5px;text-align:right;color:#333;">90</td><td style="padding:5px;text-align:right;color:#555;">49.0</td><td style="padding:5px 8px 5px 5px;text-align:right;font-weight:700;color:#C04A2A;">81.0%</td></tr>
-            <tr style="border-bottom:1px solid #eee;"><td style="padding:5px 6px 5px 8px;font-weight:600;color:var(--navy);">Birmingham-Hoover, AL</td><td style="padding:5px;text-align:right;color:#333;">177</td><td style="padding:5px;text-align:right;font-weight:700;color:var(--navy);">20</td><td style="padding:5px;text-align:right;color:#333;">40</td><td style="padding:5px;text-align:right;color:#555;">50.6</td><td style="padding:5px 8px 5px 5px;text-align:right;color:#555;">70.6%</td></tr>
-            <tr style="border-bottom:1px solid #eee;background:#F9F8F6;"><td style="padding:5px 6px 5px 8px;font-weight:600;color:var(--navy);">Greenville-Anderson, SC</td><td style="padding:5px;text-align:right;color:#333;">121</td><td style="padding:5px;text-align:right;font-weight:700;color:var(--navy);">17</td><td style="padding:5px;text-align:right;color:#333;">31</td><td style="padding:5px;text-align:right;color:#333;">54.4</td><td style="padding:5px 8px 5px 5px;text-align:right;color:#555;">73.6%</td></tr>
-            <tr><td style="padding:5px 6px 5px 8px;font-weight:600;color:var(--navy);"><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#0D1B2F;margin-right:5px;vertical-align:middle;flex-shrink:0;" title="Acquisition Priority"></span>Deltona-Daytona Beach-Ormond Beach, FL</td><td style="padding:5px;text-align:right;color:#333;">104</td><td style="padding:5px;text-align:right;font-weight:700;color:var(--navy);">16</td><td style="padding:5px;text-align:right;color:#333;">50</td><td style="padding:5px;text-align:right;color:#333;">56.2</td><td style="padding:5px 8px 5px 5px;text-align:right;color:#555;">60.6%</td></tr>
+            <tr style="background:var(--navy);"><td colspan="7" style="padding:6px 8px;font-size:9px;font-weight:800;color:#fff;letter-spacing:1px;text-transform:uppercase;">Northeast</td></tr>
+            <tr style="border-bottom:1px solid #e8e8e8;background:#EEF3FA;">
+            <td style="padding:6px 6px 6px 8px;font-weight:600;color:var(--navy);display:flex;align-items:center;"><svg width="9" height="9" style="flex-shrink:0;margin-right:5px;vertical-align:middle;position:relative;top:-1px;"><circle cx="4.5" cy="4.5" r="4" fill="#0D1B2F"/></svg>Pittsburgh, PA</td>
+            <td style="padding:6px 6px;text-align:right;color:#555;font-size:8px;">PA</td>
+            <td style="padding:6px 6px;text-align:right;color:#333;">219</td>
+            <td style="padding:6px 6px;text-align:right;font-weight:700;color:var(--navy);">46</td>
+            <td style="padding:6px 6px;text-align:right;color:#333;">73</td>
+            <td style="padding:6px 6px;text-align:right;color:#333;">52.8</td>
+            <td style="padding:6px 8px 6px 6px;text-align:right;font-weight:700;color:#3A7A50;">59.8%</td>
+          </tr><tr style="border-bottom:1px solid #e8e8e8;background:#FDF5F3;">
+            <td style="padding:6px 6px 6px 8px;font-weight:600;color:var(--navy);display:flex;align-items:center;"><svg width="9" height="9" style="flex-shrink:0;margin-right:5px;vertical-align:middle;position:relative;top:-1px;"><circle cx="4.5" cy="4.5" r="4" fill="#C04A2A"/></svg>New York-Newark-Jersey City, NY-NJ-PA</td>
+            <td style="padding:6px 6px;text-align:right;color:#555;font-size:8px;">NY/NJ/PA</td>
+            <td style="padding:6px 6px;text-align:right;color:#333;">1,278</td>
+            <td style="padding:6px 6px;text-align:right;font-weight:700;color:var(--navy);">51</td>
+            <td style="padding:6px 6px;text-align:right;color:#333;">130</td>
+            <td style="padding:6px 6px;text-align:right;color:#333;">48.2</td>
+            <td style="padding:6px 8px 6px 6px;text-align:right;font-weight:700;color:#C04A2A;">91.6%</td>
+          </tr><tr style="border-bottom:1px solid #e8e8e8;background:#FDF5F3;">
+            <td style="padding:6px 6px 6px 8px;font-weight:600;color:var(--navy);display:flex;align-items:center;"><svg width="9" height="9" style="flex-shrink:0;margin-right:5px;vertical-align:middle;position:relative;top:-1px;"><circle cx="4.5" cy="4.5" r="4" fill="#C04A2A"/></svg>Boston-Cambridge-Newton, MA-NH</td>
+            <td style="padding:6px 6px;text-align:right;color:#555;font-size:8px;">MA/NH</td>
+            <td style="padding:6px 6px;text-align:right;color:#333;">486</td>
+            <td style="padding:6px 6px;text-align:right;font-weight:700;color:var(--navy);">39</td>
+            <td style="padding:6px 6px;text-align:right;color:#333;">118</td>
+            <td style="padding:6px 6px;text-align:right;color:#333;">51.1</td>
+            <td style="padding:6px 8px 6px 6px;text-align:right;font-weight:700;color:#C04A2A;">78.4%</td>
+          </tr><tr style="border-bottom:1px solid #e8e8e8;background:#FDF5F3;">
+            <td style="padding:6px 6px 6px 8px;font-weight:600;color:var(--navy);display:flex;align-items:center;"><svg width="9" height="9" style="flex-shrink:0;margin-right:5px;vertical-align:middle;position:relative;top:-1px;"><circle cx="4.5" cy="4.5" r="4" fill="#C04A2A"/></svg>Philadelphia-Camden-Wilmington, PA-NJ-DE-MD</td>
+            <td style="padding:6px 6px;text-align:right;color:#555;font-size:8px;">PA/NJ/DE/MD</td>
+            <td style="padding:6px 6px;text-align:right;color:#333;">461</td>
+            <td style="padding:6px 6px;text-align:right;font-weight:700;color:var(--navy);">37</td>
+            <td style="padding:6px 6px;text-align:right;color:#333;">73</td>
+            <td style="padding:6px 6px;text-align:right;color:#333;">49.8</td>
+            <td style="padding:6px 8px 6px 6px;text-align:right;font-weight:700;color:#C04A2A;">83.1%</td>
+          </tr><tr style="border-bottom:1px solid #e8e8e8;background:#FDF5F3;">
+            <td style="padding:6px 6px 6px 8px;font-weight:600;color:var(--navy);display:flex;align-items:center;"><svg width="9" height="9" style="flex-shrink:0;margin-right:5px;vertical-align:middle;position:relative;top:-1px;"><circle cx="4.5" cy="4.5" r="4" fill="#C04A2A"/></svg>Washington-Arlington-Alexandria, DC-VA-MD-WV</td>
+            <td style="padding:6px 6px;text-align:right;color:#555;font-size:8px;">DC/VA/MD</td>
+            <td style="padding:6px 6px;text-align:right;color:#333;">467</td>
+            <td style="padding:6px 6px;text-align:right;font-weight:700;color:var(--navy);">36</td>
+            <td style="padding:6px 6px;text-align:right;color:#333;">91</td>
+            <td style="padding:6px 6px;text-align:right;color:#333;">50.5</td>
+            <td style="padding:6px 8px 6px 6px;text-align:right;font-weight:700;color:#C04A2A;">77.9%</td>
+          </tr>
+            <tr style="background:#1A3A5C;"><td colspan="7" style="padding:6px 8px;font-size:9px;font-weight:800;color:#fff;letter-spacing:1px;text-transform:uppercase;">South</td></tr>
+            <tr style="border-bottom:1px solid #e8e8e8;background:#EEF3FA;">
+            <td style="padding:6px 6px 6px 8px;font-weight:600;color:var(--navy);display:flex;align-items:center;"><svg width="9" height="9" style="flex-shrink:0;margin-right:5px;vertical-align:middle;position:relative;top:-1px;"><circle cx="4.5" cy="4.5" r="4" fill="#0D1B2F"/></svg>Deltona-Daytona Beach-Ormond Beach, FL</td>
+            <td style="padding:6px 6px;text-align:right;color:#555;font-size:8px;">FL</td>
+            <td style="padding:6px 6px;text-align:right;color:#333;">104</td>
+            <td style="padding:6px 6px;text-align:right;font-weight:700;color:var(--navy);">16</td>
+            <td style="padding:6px 6px;text-align:right;color:#333;">50</td>
+            <td style="padding:6px 6px;text-align:right;color:#333;">56.2</td>
+            <td style="padding:6px 8px 6px 6px;text-align:right;font-weight:700;color:#555;">60.6%</td>
+          </tr><tr style="border-bottom:1px solid #e8e8e8;background:#FDF5F3;">
+            <td style="padding:6px 6px 6px 8px;font-weight:600;color:var(--navy);display:flex;align-items:center;"><svg width="9" height="9" style="flex-shrink:0;margin-right:5px;vertical-align:middle;position:relative;top:-1px;"><circle cx="4.5" cy="4.5" r="4" fill="#C04A2A"/></svg>Nashville-Davidson-Murfreesboro-Franklin, TN</td>
+            <td style="padding:6px 6px;text-align:right;color:#555;font-size:8px;">TN</td>
+            <td style="padding:6px 6px;text-align:right;color:#333;">256</td>
+            <td style="padding:6px 6px;text-align:right;font-weight:700;color:var(--navy);">23</td>
+            <td style="padding:6px 6px;text-align:right;color:#333;">54</td>
+            <td style="padding:6px 6px;text-align:right;color:#333;">50.8</td>
+            <td style="padding:6px 8px 6px 6px;text-align:right;font-weight:700;color:#C04A2A;">75.8%</td>
+          </tr><tr style="border-bottom:1px solid #e8e8e8;background:#FDF5F3;">
+            <td style="padding:6px 6px 6px 8px;font-weight:600;color:var(--navy);display:flex;align-items:center;"><svg width="9" height="9" style="flex-shrink:0;margin-right:5px;vertical-align:middle;position:relative;top:-1px;"><circle cx="4.5" cy="4.5" r="4" fill="#C04A2A"/></svg>Atlanta-Sandy Springs-Alpharetta, GA</td>
+            <td style="padding:6px 6px;text-align:right;color:#555;font-size:8px;">GA</td>
+            <td style="padding:6px 6px;text-align:right;color:#333;">589</td>
+            <td style="padding:6px 6px;text-align:right;font-weight:700;color:var(--navy);">20</td>
+            <td style="padding:6px 6px;text-align:right;color:#333;">90</td>
+            <td style="padding:6px 6px;text-align:right;color:#333;">49.0</td>
+            <td style="padding:6px 8px 6px 6px;text-align:right;font-weight:700;color:#C04A2A;">81.0%</td>
+          </tr><tr style="border-bottom:1px solid #e8e8e8;">
+            <td style="padding:6px 6px 6px 8px;font-weight:600;color:var(--navy);display:flex;align-items:center;">Birmingham-Hoover, AL</td>
+            <td style="padding:6px 6px;text-align:right;color:#555;font-size:8px;">AL</td>
+            <td style="padding:6px 6px;text-align:right;color:#333;">177</td>
+            <td style="padding:6px 6px;text-align:right;font-weight:700;color:var(--navy);">20</td>
+            <td style="padding:6px 6px;text-align:right;color:#333;">40</td>
+            <td style="padding:6px 6px;text-align:right;color:#333;">50.6</td>
+            <td style="padding:6px 8px 6px 6px;text-align:right;font-weight:700;color:#555;">70.6%</td>
+          </tr><tr style="border-bottom:1px solid #e8e8e8;background:#F9F8F6;">
+            <td style="padding:6px 6px 6px 8px;font-weight:600;color:var(--navy);display:flex;align-items:center;">Greenville-Anderson, SC</td>
+            <td style="padding:6px 6px;text-align:right;color:#555;font-size:8px;">SC</td>
+            <td style="padding:6px 6px;text-align:right;color:#333;">121</td>
+            <td style="padding:6px 6px;text-align:right;font-weight:700;color:var(--navy);">17</td>
+            <td style="padding:6px 6px;text-align:right;color:#333;">31</td>
+            <td style="padding:6px 6px;text-align:right;color:#333;">54.4</td>
+            <td style="padding:6px 8px 6px 6px;text-align:right;font-weight:700;color:#555;">73.6%</td>
+          </tr>
           </tbody>
         </table>
       </div>
 
-      <!-- Midwest + West -->
-      <div style="display:flex;flex-direction:column;">
-        <div style="font-size:9px;font-weight:800;letter-spacing:1px;text-transform:uppercase;padding:7px 10px;background:#3A6090;color:#fff;">Midwest</div>
-        <table style="width:100%;border-collapse:collapse;font-size:8px;">
-          <thead><tr style="background:#F4F2EE;border-bottom:1px solid #ddd;">
-            <th style="text-align:left;padding:4px 6px 4px 8px;font-size:7.5px;font-weight:700;color:#555;text-transform:uppercase;letter-spacing:1px;">CBSA</th>
-            <th style="text-align:right;padding:4px 5px;font-size:7.5px;font-weight:700;color:#555;text-transform:uppercase;letter-spacing:1px;">Tgts</th>
-            <th style="text-align:right;padding:4px 5px;font-size:7.5px;font-weight:700;color:var(--navy);text-transform:uppercase;letter-spacing:1px;">65+</th>
-            <th style="text-align:right;padding:4px 5px;font-size:7.5px;font-weight:700;color:#1275B0;text-transform:uppercase;letter-spacing:1px;">59+</th>
-            <th style="text-align:right;padding:4px 5px;font-size:7.5px;font-weight:700;color:#555;text-transform:uppercase;letter-spacing:1px;">Avg</th>
-            <th style="text-align:right;padding:4px 8px 4px 5px;font-size:7.5px;font-weight:700;color:#C04A2A;text-transform:uppercase;letter-spacing:1px;">Hi-P%</th>
+      <!-- RIGHT: Midwest + West -->
+      <div style="display:flex;flex-direction:column;gap:0;overflow:hidden;">
+        <table style="width:100%;border-collapse:collapse;font-size:8.5px;">
+          <thead><tr style="border-bottom:2px solid var(--navy);background:#F4F2EE;">
+            <th style="text-align:left;padding:5px 6px 5px 8px;font-size:8px;font-weight:700;color:var(--navy);text-transform:uppercase;letter-spacing:1px;width:36%;">CBSA</th>
+            <th style="text-align:right;padding:5px 6px;font-size:8px;font-weight:700;color:#888;text-transform:uppercase;letter-spacing:1px;width:8%;">St.</th>
+            <th style="text-align:right;padding:5px 6px;font-size:8px;font-weight:700;color:var(--navy);text-transform:uppercase;letter-spacing:1px;">Tgts</th>
+            <th style="text-align:right;padding:5px 6px;font-size:8px;font-weight:700;color:var(--navy);text-transform:uppercase;letter-spacing:1px;">65+</th>
+            <th style="text-align:right;padding:5px 6px;font-size:8px;font-weight:700;color:var(--navy);text-transform:uppercase;letter-spacing:1px;">59+</th>
+            <th style="text-align:right;padding:5px 6px;font-size:8px;font-weight:700;color:var(--navy);text-transform:uppercase;letter-spacing:1px;">STOC</th>
+            <th style="text-align:right;padding:5px 8px 5px 6px;font-size:8px;font-weight:700;color:#C04A2A;text-transform:uppercase;letter-spacing:1px;">Hi-P%</th>
           </tr></thead>
           <tbody>
-            <tr style="border-bottom:1px solid #eee;"><td style="padding:5px 6px 5px 8px;font-weight:600;color:var(--navy);"><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#C04A2A;margin-right:5px;vertical-align:middle;flex-shrink:0;" title="Diligence-Heavy"></span>Chicago-Naperville-Elgin, IL-IN-WI</td><td style="padding:5px;text-align:right;color:#333;">758</td><td style="padding:5px;text-align:right;font-weight:700;color:var(--navy);">30</td><td style="padding:5px;text-align:right;color:#333;">88</td><td style="padding:5px;text-align:right;color:#555;">49.0</td><td style="padding:5px 8px 5px 5px;text-align:right;font-weight:800;color:#C04A2A;">85.6%</td></tr>
-            <tr style="border-bottom:1px solid #eee;background:#F9F8F6;"><td style="padding:5px 6px 5px 8px;font-weight:600;color:var(--navy);"><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#C04A2A;margin-right:5px;vertical-align:middle;flex-shrink:0;" title="Diligence-Heavy"></span>St. Louis, MO-IL</td><td style="padding:5px;text-align:right;color:#333;">324</td><td style="padding:5px;text-align:right;font-weight:700;color:var(--navy);">22</td><td style="padding:5px;text-align:right;color:#333;">69</td><td style="padding:5px;text-align:right;color:#333;">52.2</td><td style="padding:5px 8px 5px 5px;text-align:right;font-weight:700;color:#C04A2A;">75.6%</td></tr>
-            <tr style="border-bottom:1px solid #eee;"><td style="padding:5px 6px 5px 8px;font-weight:600;color:var(--navy);"><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#C04A2A;margin-right:5px;vertical-align:middle;flex-shrink:0;" title="Diligence-Heavy"></span>Cleveland-Elyria, OH</td><td style="padding:5px;text-align:right;color:#333;">209</td><td style="padding:5px;text-align:right;font-weight:700;color:var(--navy);">22</td><td style="padding:5px;text-align:right;color:#333;">41</td><td style="padding:5px;text-align:right;color:#333;">52.9</td><td style="padding:5px 8px 5px 5px;text-align:right;font-weight:700;color:#C04A2A;">80.4%</td></tr>
-            <tr style="border-bottom:1px solid #eee;background:#F9F8F6;"><td style="padding:5px 6px 5px 8px;font-weight:600;color:var(--navy);"><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#C04A2A;margin-right:5px;vertical-align:middle;flex-shrink:0;" title="Diligence-Heavy"></span>Minneapolis-St. Paul-Bloomington, MN-WI</td><td style="padding:5px;text-align:right;color:#333;">405</td><td style="padding:5px;text-align:right;font-weight:700;color:var(--navy);">20</td><td style="padding:5px;text-align:right;color:#333;">58</td><td style="padding:5px;text-align:right;color:#555;">49.4</td><td style="padding:5px 8px 5px 5px;text-align:right;font-weight:700;color:#C04A2A;">79.3%</td></tr>
-            <tr><td style="padding:5px 6px 5px 8px;font-weight:600;color:var(--navy);"><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#0D1B2F;margin-right:5px;vertical-align:middle;flex-shrink:0;" title="Acquisition Priority"></span>Lansing-East Lansing, MI</td><td style="padding:5px;text-align:right;color:#333;">90</td><td style="padding:5px;text-align:right;font-weight:700;color:var(--navy);">19</td><td style="padding:5px;text-align:right;color:#333;">63</td><td style="padding:5px;text-align:right;font-weight:700;color:#1275B0;">60.1</td><td style="padding:5px 8px 5px 5px;text-align:right;color:#555;">60.0%</td></tr>
-          </tbody>
-        </table>
-
-        <div style="font-size:9px;font-weight:800;letter-spacing:1px;text-transform:uppercase;padding:7px 10px;background:#2a4a6a;color:#fff;margin-top:10px;">West</div>
-        <table style="width:100%;border-collapse:collapse;font-size:8px;">
-          <thead><tr style="background:#F4F2EE;border-bottom:1px solid #ddd;">
-            <th style="text-align:left;padding:4px 6px 4px 8px;font-size:7.5px;font-weight:700;color:#555;text-transform:uppercase;letter-spacing:1px;">CBSA</th>
-            <th style="text-align:right;padding:4px 5px;font-size:7.5px;font-weight:700;color:#555;text-transform:uppercase;letter-spacing:1px;">Tgts</th>
-            <th style="text-align:right;padding:4px 5px;font-size:7.5px;font-weight:700;color:var(--navy);text-transform:uppercase;letter-spacing:1px;">65+</th>
-            <th style="text-align:right;padding:4px 5px;font-size:7.5px;font-weight:700;color:#1275B0;text-transform:uppercase;letter-spacing:1px;">59+</th>
-            <th style="text-align:right;padding:4px 5px;font-size:7.5px;font-weight:700;color:#555;text-transform:uppercase;letter-spacing:1px;">Avg</th>
-            <th style="text-align:right;padding:4px 8px 4px 5px;font-size:7.5px;font-weight:700;color:#C04A2A;text-transform:uppercase;letter-spacing:1px;">Hi-P%</th>
-          </tr></thead>
-          <tbody>
-            <tr style="border-bottom:1px solid #eee;"><td style="padding:5px 6px 5px 8px;font-weight:600;color:var(--navy);"><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#0D1B2F;margin-right:5px;vertical-align:middle;flex-shrink:0;" title="Acquisition Priority"></span>Medford, OR</td><td style="padding:5px;text-align:right;color:#333;">35</td><td style="padding:5px;text-align:right;font-weight:700;color:var(--navy);">12</td><td style="padding:5px;text-align:right;color:#333;">29</td><td style="padding:5px;text-align:right;font-weight:700;color:#1275B0;">60.5</td><td style="padding:5px 8px 5px 5px;text-align:right;font-weight:700;color:#3A7A50;">8.6%</td></tr>
-            <tr style="border-bottom:1px solid #eee;background:#F9F8F6;"><td style="padding:5px 6px 5px 8px;font-weight:600;color:var(--navy);">Anchorage, AK</td><td style="padding:5px;text-align:right;color:#333;">59</td><td style="padding:5px;text-align:right;font-weight:700;color:var(--navy);">11</td><td style="padding:5px;text-align:right;color:#333;">29</td><td style="padding:5px;text-align:right;color:#333;">55.4</td><td style="padding:5px 8px 5px 5px;text-align:right;color:#555;">49.2%</td></tr>
-            <tr style="border-bottom:1px solid #eee;"><td style="padding:5px 6px 5px 8px;font-weight:600;color:var(--navy);">Bend, OR</td><td style="padding:5px;text-align:right;color:#333;">30</td><td style="padding:5px;text-align:right;font-weight:700;color:var(--navy);">10</td><td style="padding:5px;text-align:right;color:#333;">17</td><td style="padding:5px;text-align:right;font-weight:700;color:#1275B0;">59.1</td><td style="padding:5px 8px 5px 5px;text-align:right;color:#555;">36.7%</td></tr>
-            <tr style="border-bottom:1px solid #eee;background:#F9F8F6;"><td style="padding:5px 6px 5px 8px;font-weight:600;color:var(--navy);"><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#C04A2A;margin-right:5px;vertical-align:middle;flex-shrink:0;" title="Diligence-Heavy"></span>Seattle-Tacoma-Bellevue, WA</td><td style="padding:5px;text-align:right;color:#333;">382</td><td style="padding:5px;text-align:right;font-weight:700;color:var(--navy);">9</td><td style="padding:5px;text-align:right;color:#333;">28</td><td style="padding:5px;text-align:right;color:#555;">47.1</td><td style="padding:5px 8px 5px 5px;text-align:right;font-weight:800;color:#C04A2A;">93.5%</td></tr>
-            <tr><td style="padding:5px 6px 5px 8px;font-weight:600;color:var(--navy);"><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#C04A2A;margin-right:5px;vertical-align:middle;flex-shrink:0;" title="Diligence-Heavy"></span>Denver-Aurora-Lakewood, CO</td><td style="padding:5px;text-align:right;color:#333;">369</td><td style="padding:5px;text-align:right;font-weight:700;color:var(--navy);">7</td><td style="padding:5px;text-align:right;color:#333;">19</td><td style="padding:5px;text-align:right;color:#555;">46.0</td><td style="padding:5px 8px 5px 5px;text-align:right;font-weight:800;color:#C04A2A;">92.7%</td></tr>
+            <tr style="background:#3A6090;"><td colspan="7" style="padding:6px 8px;font-size:9px;font-weight:800;color:#fff;letter-spacing:1px;text-transform:uppercase;">Midwest</td></tr>
+            <tr style="border-bottom:1px solid #e8e8e8;background:#EEF3FA;">
+            <td style="padding:6px 6px 6px 8px;font-weight:600;color:var(--navy);display:flex;align-items:center;"><svg width="9" height="9" style="flex-shrink:0;margin-right:5px;vertical-align:middle;position:relative;top:-1px;"><circle cx="4.5" cy="4.5" r="4" fill="#0D1B2F"/></svg>Lansing-East Lansing, MI</td>
+            <td style="padding:6px 6px;text-align:right;color:#555;font-size:8px;">MI</td>
+            <td style="padding:6px 6px;text-align:right;color:#333;">90</td>
+            <td style="padding:6px 6px;text-align:right;font-weight:700;color:var(--navy);">19</td>
+            <td style="padding:6px 6px;text-align:right;color:#333;">63</td>
+            <td style="padding:6px 6px;text-align:right;color:#333;">60.1</td>
+            <td style="padding:6px 8px 6px 6px;text-align:right;font-weight:700;color:#555;">60.0%</td>
+          </tr><tr style="border-bottom:1px solid #e8e8e8;background:#FDF5F3;">
+            <td style="padding:6px 6px 6px 8px;font-weight:600;color:var(--navy);display:flex;align-items:center;"><svg width="9" height="9" style="flex-shrink:0;margin-right:5px;vertical-align:middle;position:relative;top:-1px;"><circle cx="4.5" cy="4.5" r="4" fill="#C04A2A"/></svg>Chicago-Naperville-Elgin, IL-IN-WI</td>
+            <td style="padding:6px 6px;text-align:right;color:#555;font-size:8px;">IL/IN/WI</td>
+            <td style="padding:6px 6px;text-align:right;color:#333;">758</td>
+            <td style="padding:6px 6px;text-align:right;font-weight:700;color:var(--navy);">30</td>
+            <td style="padding:6px 6px;text-align:right;color:#333;">88</td>
+            <td style="padding:6px 6px;text-align:right;color:#333;">49.0</td>
+            <td style="padding:6px 8px 6px 6px;text-align:right;font-weight:700;color:#C04A2A;">85.6%</td>
+          </tr><tr style="border-bottom:1px solid #e8e8e8;background:#FDF5F3;">
+            <td style="padding:6px 6px 6px 8px;font-weight:600;color:var(--navy);display:flex;align-items:center;"><svg width="9" height="9" style="flex-shrink:0;margin-right:5px;vertical-align:middle;position:relative;top:-1px;"><circle cx="4.5" cy="4.5" r="4" fill="#C04A2A"/></svg>St. Louis, MO-IL</td>
+            <td style="padding:6px 6px;text-align:right;color:#555;font-size:8px;">MO/IL</td>
+            <td style="padding:6px 6px;text-align:right;color:#333;">324</td>
+            <td style="padding:6px 6px;text-align:right;font-weight:700;color:var(--navy);">22</td>
+            <td style="padding:6px 6px;text-align:right;color:#333;">69</td>
+            <td style="padding:6px 6px;text-align:right;color:#333;">52.2</td>
+            <td style="padding:6px 8px 6px 6px;text-align:right;font-weight:700;color:#C04A2A;">75.6%</td>
+          </tr><tr style="border-bottom:1px solid #e8e8e8;background:#FDF5F3;">
+            <td style="padding:6px 6px 6px 8px;font-weight:600;color:var(--navy);display:flex;align-items:center;"><svg width="9" height="9" style="flex-shrink:0;margin-right:5px;vertical-align:middle;position:relative;top:-1px;"><circle cx="4.5" cy="4.5" r="4" fill="#C04A2A"/></svg>Cleveland-Elyria, OH</td>
+            <td style="padding:6px 6px;text-align:right;color:#555;font-size:8px;">OH</td>
+            <td style="padding:6px 6px;text-align:right;color:#333;">209</td>
+            <td style="padding:6px 6px;text-align:right;font-weight:700;color:var(--navy);">22</td>
+            <td style="padding:6px 6px;text-align:right;color:#333;">41</td>
+            <td style="padding:6px 6px;text-align:right;color:#333;">52.9</td>
+            <td style="padding:6px 8px 6px 6px;text-align:right;font-weight:700;color:#C04A2A;">80.4%</td>
+          </tr><tr style="border-bottom:1px solid #e8e8e8;background:#FDF5F3;">
+            <td style="padding:6px 6px 6px 8px;font-weight:600;color:var(--navy);display:flex;align-items:center;"><svg width="9" height="9" style="flex-shrink:0;margin-right:5px;vertical-align:middle;position:relative;top:-1px;"><circle cx="4.5" cy="4.5" r="4" fill="#C04A2A"/></svg>Minneapolis-St. Paul-Bloomington, MN-WI</td>
+            <td style="padding:6px 6px;text-align:right;color:#555;font-size:8px;">MN/WI</td>
+            <td style="padding:6px 6px;text-align:right;color:#333;">405</td>
+            <td style="padding:6px 6px;text-align:right;font-weight:700;color:var(--navy);">20</td>
+            <td style="padding:6px 6px;text-align:right;color:#333;">58</td>
+            <td style="padding:6px 6px;text-align:right;color:#333;">49.4</td>
+            <td style="padding:6px 8px 6px 6px;text-align:right;font-weight:700;color:#C04A2A;">79.3%</td>
+          </tr>
+            <tr style="background:#2a4a6a;"><td colspan="7" style="padding:6px 8px;font-size:9px;font-weight:800;color:#fff;letter-spacing:1px;text-transform:uppercase;">West</td></tr>
+            <tr style="border-bottom:1px solid #e8e8e8;background:#EEF3FA;">
+            <td style="padding:6px 6px 6px 8px;font-weight:600;color:var(--navy);display:flex;align-items:center;"><svg width="9" height="9" style="flex-shrink:0;margin-right:5px;vertical-align:middle;position:relative;top:-1px;"><circle cx="4.5" cy="4.5" r="4" fill="#0D1B2F"/></svg>Medford, OR</td>
+            <td style="padding:6px 6px;text-align:right;color:#555;font-size:8px;">OR</td>
+            <td style="padding:6px 6px;text-align:right;color:#333;">35</td>
+            <td style="padding:6px 6px;text-align:right;font-weight:700;color:var(--navy);">12</td>
+            <td style="padding:6px 6px;text-align:right;color:#333;">29</td>
+            <td style="padding:6px 6px;text-align:right;color:#333;">60.5</td>
+            <td style="padding:6px 8px 6px 6px;text-align:right;font-weight:700;color:#3A7A50;">8.6%</td>
+          </tr><tr style="border-bottom:1px solid #e8e8e8;">
+            <td style="padding:6px 6px 6px 8px;font-weight:600;color:var(--navy);display:flex;align-items:center;">Bend, OR</td>
+            <td style="padding:6px 6px;text-align:right;color:#555;font-size:8px;">OR</td>
+            <td style="padding:6px 6px;text-align:right;color:#333;">30</td>
+            <td style="padding:6px 6px;text-align:right;font-weight:700;color:var(--navy);">10</td>
+            <td style="padding:6px 6px;text-align:right;color:#333;">17</td>
+            <td style="padding:6px 6px;text-align:right;color:#333;">59.1</td>
+            <td style="padding:6px 8px 6px 6px;text-align:right;font-weight:700;color:#3A7A50;">36.7%</td>
+          </tr><tr style="border-bottom:1px solid #e8e8e8;background:#F9F8F6;">
+            <td style="padding:6px 6px 6px 8px;font-weight:600;color:var(--navy);display:flex;align-items:center;">Anchorage, AK</td>
+            <td style="padding:6px 6px;text-align:right;color:#555;font-size:8px;">AK</td>
+            <td style="padding:6px 6px;text-align:right;color:#333;">59</td>
+            <td style="padding:6px 6px;text-align:right;font-weight:700;color:var(--navy);">11</td>
+            <td style="padding:6px 6px;text-align:right;color:#333;">29</td>
+            <td style="padding:6px 6px;text-align:right;color:#333;">55.4</td>
+            <td style="padding:6px 8px 6px 6px;text-align:right;font-weight:700;color:#3A7A50;">49.2%</td>
+          </tr><tr style="border-bottom:1px solid #e8e8e8;background:#FDF5F3;">
+            <td style="padding:6px 6px 6px 8px;font-weight:600;color:var(--navy);display:flex;align-items:center;"><svg width="9" height="9" style="flex-shrink:0;margin-right:5px;vertical-align:middle;position:relative;top:-1px;"><circle cx="4.5" cy="4.5" r="4" fill="#C04A2A"/></svg>Seattle-Tacoma-Bellevue, WA</td>
+            <td style="padding:6px 6px;text-align:right;color:#555;font-size:8px;">WA</td>
+            <td style="padding:6px 6px;text-align:right;color:#333;">382</td>
+            <td style="padding:6px 6px;text-align:right;font-weight:700;color:var(--navy);">9</td>
+            <td style="padding:6px 6px;text-align:right;color:#333;">28</td>
+            <td style="padding:6px 6px;text-align:right;color:#333;">47.1</td>
+            <td style="padding:6px 8px 6px 6px;text-align:right;font-weight:700;color:#C04A2A;">93.5%</td>
+          </tr><tr style="border-bottom:1px solid #e8e8e8;background:#FDF5F3;">
+            <td style="padding:6px 6px 6px 8px;font-weight:600;color:var(--navy);display:flex;align-items:center;"><svg width="9" height="9" style="flex-shrink:0;margin-right:5px;vertical-align:middle;position:relative;top:-1px;"><circle cx="4.5" cy="4.5" r="4" fill="#C04A2A"/></svg>Denver-Aurora-Lakewood, CO</td>
+            <td style="padding:6px 6px;text-align:right;color:#555;font-size:8px;">CO</td>
+            <td style="padding:6px 6px;text-align:right;color:#333;">369</td>
+            <td style="padding:6px 6px;text-align:right;font-weight:700;color:var(--navy);">7</td>
+            <td style="padding:6px 6px;text-align:right;color:#333;">19</td>
+            <td style="padding:6px 6px;text-align:right;color:#333;">46.0</td>
+            <td style="padding:6px 8px 6px 6px;text-align:right;font-weight:700;color:#C04A2A;">92.7%</td>
+          </tr>
           </tbody>
         </table>
       </div>
 
+    </div>
+
+    <!-- Bottom regional summary -->
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:8px;flex-shrink:0;">
+      <div style="padding:9px 12px;background:#EEF3FA;border-top:2px solid var(--navy);">
+        <div style="font-size:8.5px;font-weight:800;color:var(--navy);">Northeast</div>
+        <div style="font-size:18px;font-weight:800;color:var(--navy);line-height:1.1;margin:2px 0;">1,069 <span style="font-size:9px;font-weight:400;color:#888;">65+ targets</span></div>
+        <div style="font-size:7.5px;color:#555;line-height:1.4;">Highest top-tier count. Only Pittsburgh screens as acquisition priority. All other large NE CBSAs are diligence-heavy.</div>
+      </div>
+      <div style="padding:9px 12px;background:#EEF3FA;border-top:2px solid #3A6090;">
+        <div style="font-size:8.5px;font-weight:800;color:#3A6090;">Midwest</div>
+        <div style="font-size:18px;font-weight:800;color:#3A6090;line-height:1.1;margin:2px 0;">898 <span style="font-size:9px;font-weight:400;color:#888;">65+ targets</span></div>
+        <div style="font-size:7.5px;color:#555;line-height:1.4;">Only Lansing screens as acquisition priority. Chicago, St. Louis, Cleveland, and Minneapolis are all diligence-heavy. Lowest platform context at 5.3%.</div>
+      </div>
+      <div style="padding:9px 12px;background:#FDF5F3;border-top:2px solid #C04A2A;">
+        <div style="font-size:8.5px;font-weight:800;color:#C04A2A;">South</div>
+        <div style="font-size:18px;font-weight:800;color:#C04A2A;line-height:1.1;margin:2px 0;">1,006 <span style="font-size:9px;font-weight:400;color:#888;">65+ targets</span></div>
+        <div style="font-size:7.5px;color:#555;line-height:1.4;">Largest raw pool but 67% high-pressure share. Deltona is the standout acquisition-priority market. South requires the most CBSA filtering of any region.</div>
+      </div>
+      <div style="padding:9px 12px;background:#EEF4EE;border-top:2px solid #3A7A50;">
+        <div style="font-size:8.5px;font-weight:800;color:#3A7A50;">West</div>
+        <div style="font-size:18px;font-weight:800;color:#3A7A50;line-height:1.1;margin:2px 0;">963 <span style="font-size:9px;font-weight:400;color:#888;">65+ targets</span></div>
+        <div style="font-size:7.5px;color:#555;line-height:1.4;">Best avg STOC score (54.1). Medford is the cleanest acquisition-priority market at 8.6% pressure. Seattle and Denver have depth but near-total competitive saturation.</div>
+      </div>
     </div>
 
   </div>
-
-    <!-- Regional comparison callout strip - fills bottom -->
-    <div style="padding:0 0 10px;flex-shrink:0;">
-      <div style="font-size:8px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#888;margin-bottom:7px;margin-top:10px;">Regional Comparison at a Glance</div>
-      <div style="display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:8px;">
-        <div style="padding:11px 13px;background:#F4F2EE;border-top:3px solid var(--navy);">
-          <div style="font-size:9px;font-weight:800;color:var(--navy);margin-bottom:4px;">Northeast</div>
-          <div style="font-size:22px;font-weight:800;color:var(--navy);line-height:1;margin-bottom:3px;">1,069</div>
-          <div style="font-size:8px;font-weight:600;color:#333;margin-bottom:3px;">65+ targets</div>
-          <div style="font-size:8px;color:#888;line-height:1.4;">Highest top-tier count but concentrated in a few CBSAs. Many markets are diligence-heavy.</div>
-        </div>
-        <div style="padding:11px 13px;background:#F4F2EE;border-top:3px solid #1275B0;">
-          <div style="font-size:9px;font-weight:800;color:#1275B0;margin-bottom:4px;">Midwest</div>
-          <div style="font-size:22px;font-weight:800;color:#1275B0;line-height:1;margin-bottom:3px;">898</div>
-          <div style="font-size:8px;font-weight:600;color:#333;margin-bottom:3px;">65+ targets</div>
-          <div style="font-size:8px;color:#888;line-height:1.4;">Lower platform context (5.3%) and more balanced pressure. Best risk-adjusted starting point outside the NE.</div>
-        </div>
-        <div style="padding:11px 13px;background:#F4F2EE;border-top:3px solid #C04A2A;">
-          <div style="font-size:9px;font-weight:800;color:#C04A2A;margin-bottom:4px;">South</div>
-          <div style="font-size:22px;font-weight:800;color:#C04A2A;line-height:1;margin-bottom:3px;">1,006</div>
-          <div style="font-size:8px;font-weight:600;color:#333;margin-bottom:3px;">65+ targets</div>
-          <div style="font-size:8px;color:#888;line-height:1.4;">Largest raw pool (10,954 total) but 67% high-pressure share. Requires tighter CBSA filtering than other regions.</div>
-        </div>
-        <div style="padding:11px 13px;background:#F4F2EE;border-top:3px solid #3A6090;">
-          <div style="font-size:9px;font-weight:800;color:#3A6090;margin-bottom:4px;">West</div>
-          <div style="font-size:22px;font-weight:800;color:#3A6090;line-height:1;margin-bottom:3px;">963</div>
-          <div style="font-size:8px;font-weight:600;color:#333;margin-bottom:3px;">65+ targets</div>
-          <div style="font-size:8px;color:#888;line-height:1.4;">Best avg score (54.1) but highest platform context (11.5%). Medford and Bend are the cleanest entry points.</div>
-        </div>
-      </div>
-    </div>
-
-  <div class="fn-area"><span>Hi-P%</span> = high-pressure share within the CBSA. <span>Tgts</span> = total independent targetable locations. West note: Medford and Bend offer the strongest clean entry profiles in the region (low pressure, above-average index) but with limited absolute depth. Seattle and Denver show large target pools at extremely high competitive pressure; treat as diligence-heavy. Tables show top 5 CBSAs per region by 65+ target depth using valid CBSA labels only.</div>
+  <div class="fn-area"><span>AP = acquisition-priority</span> (from P8 table, manageable competitive conditions). <span>DH = diligence-heavy</span> (from P10 table, elevated pressure requiring tighter target-level screening). Within each region, AP rows appear first, then DH, then regional reference. Anchorage AK is shown for completeness; it is excluded from the continental US map. <span>STOC</span> = avg STOC Geo Index. <span>Hi-P%</span> = share of targets in that CBSA facing high PE-weighted competitive pressure.</div>
   <div class="pg-ftr"><span>7</span></div>
 </div>
 <!-- PAGE 8 ACQUISITION PRIORITY CBSAs -->
