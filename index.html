@@ -180,7 +180,7 @@ body {
 
     <div>
       <div class="sec-label">Universe &amp; Thesis</div>
-      <div class="pg-headline" style="margin-bottom:5px;">27% of the 33,687-Target Universe Passes the Top-Quartile Screen. The Best Markets Sit Between Scarcity and Saturation.</div>
+      <div class="pg-headline" style="margin-bottom:5px;">9,174 of 33,687 Targetable Locations Pass the Top-Quartile Screen. The Best Markets Sit Between Scarcity and Saturation.</div>
       <div class="body-txt">This report covers the U.S. veterinary services market as a geographic acquisition-screening analysis. The core thesis is not a density story. The most useful acquisition markets are CBSAs where high-quality target depth and sourcing breadth overlap, without the local competitive pressure that suppresses pricing and erodes defensibility. This report identifies where to focus, what to diligence, and which market types require caution. It is a market screen, not a target-level underwriting model.</div>
     </div>
 
@@ -190,6 +190,14 @@ body {
       <div class="stat-box"><div class="stat-num">33,687</div><div class="stat-lbl">Targetable independent locations</div><div style="font-size:8px;color:#aaa;margin-top:2px;">Primary acquisition screening universe</div></div>
       <div class="stat-box"><div class="stat-num">762</div><div class="stat-lbl">Validated CBSAs</div><div style="font-size:8px;color:#aaa;margin-top:2px;">Used for CBSA-level priority rankings</div></div>
       <div class="stat-box" style="border-right:0;"><div class="stat-num">50</div><div class="stat-lbl">States covered</div><div style="font-size:8px;color:#aaa;margin-top:2px;">Supports national and regional analysis</div></div>
+    </div>
+
+    <!-- Universe reconciliation note -->
+    <div style="padding:6px 14px;background:#F4F2EE;border-left:4px solid var(--navy);flex-shrink:0;display:grid;grid-template-columns:repeat(4,1fr);gap:12px;">
+      <div><div style="font-size:8px;font-weight:700;color:var(--navy);">36,668 active supply</div><div style="font-size:7.5px;color:#555;line-height:1.4;">All veterinary practice locations in dataset. Includes independent and anonymized platform-owned context.</div></div>
+      <div><div style="font-size:8px;font-weight:700;color:var(--navy);">33,687 targetable</div><div style="font-size:7.5px;color:#555;line-height:1.4;">Independent (non-platform-owned) locations. Primary acquisition screening universe used throughout this report.</div></div>
+      <div><div style="font-size:8px;font-weight:700;color:var(--navy);">27,776 with validated CBSA</div><div style="font-size:7.5px;color:#555;line-height:1.4;">Subset with a validated CBSA label. Used for all CBSA-level rankings and geographic exhibits. 5,911 remain in universe only.</div></div>
+      <div><div style="font-size:8px;font-weight:700;color:var(--navy);">29,057 with valid population</div><div style="font-size:7.5px;color:#555;line-height:1.4;">Subset with population data. Used for supply gap, density, and de novo scoring. 4,630 rows excluded from these calculations only.</div></div>
     </div>
 
     <!-- Score tiers + executive readout -->
@@ -210,7 +218,7 @@ body {
               <td style="padding:7px 8px;font-weight:700;color:var(--navy);">77+</td>
               <td style="padding:7px 8px;text-align:right;font-weight:800;color:var(--navy);font-size:11px;">4,151</td>
               <td style="padding:7px 8px;text-align:right;font-weight:700;color:var(--navy);">12.3%</td>
-              <td style="padding:7px 0 7px 8px;color:#333;">Premium acquisition screen. Highest-conviction sourcing pool.</td>
+              <td style="padding:7px 0 7px 8px;color:#333;">Premium geographic screen. Strongest competitive-positioning and supply-gap profile in the dataset.</td>
             </tr>
             <tr style="border-bottom:1px solid #eee;">
               <td style="padding:7px 8px 7px 0;font-weight:700;color:#1275B0;">Top-quartile</td>
@@ -244,7 +252,7 @@ body {
         <div style="padding:8px 12px;background:#F4F2EE;border-left:3px solid #1275B0;"><div style="font-size:8.5px;color:#333;line-height:1.55;"><span style="font-weight:700;color:#1275B0;">The South has scale but requires filtering.</span> Largest target pool at 10,954 locations; 61.4% high-pressure share demands CBSA-level prioritization.</div></div>
         <div style="padding:8px 12px;background:#F4F2EE;border-left:3px solid #3A7A50;"><div style="font-size:8.5px;color:#333;line-height:1.55;"><span style="font-weight:700;color:#3A7A50;">Z3 is the peak acquisition zone.</span> Average STOC Geo Index 73.1, top-quartile share 68.3%. The best opportunities are where supply is proven but not immediately crowded.</div></div>
         <div style="padding:8px 12px;background:#F4F2EE;border-left:3px solid #C04A2A;"><div style="font-size:8.5px;color:#333;line-height:1.55;"><span style="font-weight:700;color:#C04A2A;">High-pressure markets almost never pass top-quartile.</span> 20,629 high-pressure targets produce just 32 top-quartile screens (0.2% share).</div></div>
-        <div style="padding:8px 12px;background:#F4F2EE;border-left:3px solid #9AB0C8;"><div style="font-size:8.5px;color:#333;line-height:1.55;"><span style="font-weight:700;color:#555;">De novo is a separate, narrower screen.</span> 507 locations (166 strong + 341 possible) pass the de novo screen. Do not merge with acquisition sourcing.</div></div>
+        <div style="padding:8px 12px;background:#F4F2EE;border-left:3px solid #9AB0C8;"><div style="font-size:8.5px;color:#333;line-height:1.55;"><span style="font-weight:700;color:#555;">De novo is a separate, narrower screen.</span> 507 locations (166 strong + 341 possible) pass the de novo screen. It uses different inputs (supply gap, population coverage) and identifies different market types. Acquisition and de novo lists should always be kept and used separately.</div></div>
       </div>
     </div>
 
@@ -272,7 +280,7 @@ body {
 
     <div>
       <div class="sec-label">Regional Intelligence</div>
-      <div class="pg-headline" style="margin-bottom:5px;">The Midwest Has the Strongest Balanced Profile. The West Has the Highest Pressure and the Lowest Top-Quartile Share of Any Region.</div>
+      <div class="pg-headline" style="margin-bottom:5px;">The Midwest Has the Strongest Balanced Profile (31.3% TQ Share, 61.3 Avg STOC). The West Has the Highest Pressure (73% Hi-P) and Lowest Top-Quartile Share (20.6%) of Any Region.</div>
       <div class="body-txt">Use top-quartile share (71+) to compare regional quality, not raw location count. The South leads on volume but lags on concentration. The Midwest offers the best balance of quality depth, top-quartile share, and lower competitive density.</div>
     </div>
 
@@ -365,8 +373,8 @@ body {
 
     <!-- Methodology note -->
     <div style="padding:9px 14px;background:#F4F2EE;border-left:4px solid var(--navy);flex-shrink:0;">
-      <div style="font-size:8px;font-weight:700;color:var(--navy);margin-bottom:3px;">Report framing note</div>
-      <div style="font-size:8px;color:#333;line-height:1.5;">Southeast has been merged into South for all regional exhibits. Top-quartile share (71+) is the recommended quality metric for regional comparison; it best reflects where higher-quality screens are concentrated, not just where clinics are most numerous.</div>
+      <div style="font-size:8px;font-weight:700;color:var(--navy);margin-bottom:3px;">Custom regional grouping</div>
+      <div style="font-size:8px;color:#333;line-height:1.5;">This report uses four regions: Midwest, Northeast, South, and West. Southeast states (AL, AR, FL, GA, KY, LA, MS, NC, SC, TN, TX, VA, WV) are included in South for all regional exhibits. This grouping is specific to this report and does not reflect standard OMB or Census Bureau definitions. Top-quartile share (71+) is the primary quality metric for regional comparison.</div>
     </div>
 
   </div>
@@ -385,6 +393,7 @@ body {
     </div>
 
     <div style="flex:1;overflow:hidden;">
+      <div style="font-size:7.5px;color:#aaa;margin-bottom:3px;text-align:right;">All column abbreviations defined in table notes below</div>
       <table style="width:100%;border-collapse:collapse;font-size:8px;">
         <thead><tr style="border-bottom:2px solid var(--navy);">
           <th style="text-align:left;padding:4px 6px 4px 0;font-size:7.5px;font-weight:700;color:var(--navy);text-transform:uppercase;letter-spacing:1px;width:5%;">Reg.</th>
@@ -1998,7 +2007,7 @@ body {
         <div style="font-size:8px;font-weight:700;color:rgba(255,255,255,0.6);text-transform:uppercase;letter-spacing:1px;margin-bottom:3px;">Acquisition-led screen</div>
         <div style="font-size:28px;font-weight:800;color:#fff;line-height:1;margin-bottom:3px;">8,903</div>
         <div style="font-size:8.5px;color:rgba(255,255,255,0.8);">Avg STOC: 75.9 &nbsp;|&nbsp; Avg pressure: 13.8</div>
-        <div style="font-size:8px;color:rgba(255,255,255,0.6);margin-top:3px;line-height:1.4;">Strong score, negative supply gap (-12.8). Buy existing clinics in markets where supply is established.</div>
+        <div style="font-size:8px;color:rgba(255,255,255,0.6);margin-top:3px;line-height:1.4;">Strong geographic screen, negative supply gap (-12.8). Markets where established supply creates demonstrated demand. The acquisition opportunity is in the existing clinic base.</div>
       </div>
       <div style="padding:11px 14px;background:#F4F2EE;border-top:3px solid #3A7A50;">
         <div style="font-size:8px;font-weight:700;color:#3A7A50;text-transform:uppercase;letter-spacing:1px;margin-bottom:3px;">De novo-led screen</div>
@@ -2123,6 +2132,14 @@ body {
 
       <!-- Right: use controls -->
       <div>
+        <div style="font-size:8px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#888;margin-bottom:5px;">Key Term Definitions</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:5px;margin-bottom:10px;">
+          <div style="padding:6px 10px;background:#F4F2EE;border-left:2px solid var(--navy);"><span style="font-size:8px;font-weight:700;color:var(--navy);">Active veterinary supply (36,668)</span><div style="font-size:7.5px;color:#555;line-height:1.4;margin-top:1px;">All veterinary practice locations used in this analysis, including both independent clinics and anonymized platform-owned locations.</div></div>
+          <div style="padding:6px 10px;background:#F4F2EE;border-left:2px solid var(--navy);"><span style="font-size:8px;font-weight:700;color:var(--navy);">Targetable independent locations (33,687)</span><div style="font-size:7.5px;color:#555;line-height:1.4;margin-top:1px;">Independent (non-platform-owned) locations eligible for acquisition screening. The primary universe for all scoring, ranking, and CBSA exhibits.</div></div>
+          <div style="padding:6px 10px;background:#F4F2EE;border-left:2px solid #555;"><span style="font-size:8px;font-weight:700;color:#555;">Platform-owned context locations (2,981)</span><div style="font-size:7.5px;color:#555;line-height:1.4;margin-top:1px;">Locations owned by veterinary consolidation platforms. Anonymized. Used only as competitive-density context. Not acquisition targets.</div></div>
+          <div style="padding:6px 10px;background:#F4F2EE;border-left:2px solid #555;"><span style="font-size:8px;font-weight:700;color:#555;">STOC Geo Index</span><div style="font-size:7.5px;color:#555;line-height:1.4;margin-top:1px;">Composite acquisition-screening score for each targetable independent location. Combines supply gap, competitive pressure, local density, and service-area positioning.</div></div>
+        </div>
+
         <div style="font-size:8px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#888;margin-bottom:5px;">External Report Use Controls</div>
         <div style="display:flex;flex-direction:column;gap:5px;">
           <div style="padding:8px 12px;background:#F4F2EE;border-left:3px solid var(--navy);">
